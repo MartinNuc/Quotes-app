@@ -1,0 +1,7 @@
+<div *ngIf="quote$ | async as quote; else empty">
+  <app-quote [quote]="quote"></app-quote>
+  <button type="button" (click)="addAsFavorite(quote)" *ngIf="!quote.favorite">Add as favorite</button>
+  <button type="button" (click)="removeFromFavorites(quote)" *ngIf="quote.favorite">Remove from favorites</button>
+  <button type="button" (click)="next()">Next quote</button>
+</div>
+<ng-template #empty>Loading...</ng-template>
