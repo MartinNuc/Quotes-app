@@ -20,7 +20,8 @@ export class RandomQuoteComponent implements OnInit {
   quote$: Observable<Quote>;
   nextClick$ = new Subject<void>();
 
-  constructor(public quotesService: QuotesService, public favoriteQuotesService: FavoriteQuotesService) { }
+  constructor(public quotesService: QuotesService, public favoriteQuotesService: FavoriteQuotesService) {
+  }
 
   ngOnInit() {
     this.quote$ = this.nextClick$.startWith(null).switchMap(() => this.quotesService.fetchRandomQuote())

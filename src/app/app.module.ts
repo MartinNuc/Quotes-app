@@ -15,7 +15,7 @@ import { FavoriteQuotesService } from './favorite-quotes.service';
     AppComponent,
     RandomQuoteComponent,
     MyQuotesComponent,
-    QuoteComponent,
+    QuoteComponent
   ],
   imports: [
     BrowserModule,
